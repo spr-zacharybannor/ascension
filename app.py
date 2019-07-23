@@ -12,11 +12,11 @@ def _get_datapoints():
 @app.route("/")
 def index():
     data = _get_datapoints()
-    return flask.render_template("index.html", data=data)
+    return flask.render_template("home/index.html", data=data)
 
 @app.route("/about")
 def about():
-    return flask.render_template("/about.html")
+    return flask.render_template("home/about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
